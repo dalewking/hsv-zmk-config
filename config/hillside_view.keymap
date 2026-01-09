@@ -4,6 +4,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+&sk {
+    release-after-ms = <600>;
+    quick-release;
+};
+
 / {
     behaviors {
         ht: hold_tap {
@@ -47,6 +52,16 @@
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
             quick-tap-ms = <150>;
+        };
+
+        sk_layer: sk_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SK_LAYER";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
         };
     };
 
@@ -108,11 +123,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&ht ESCAPE GRAVE  &ht N1 Q         &ht N2 W          &ht N3 E            &ht N4 R                &ht N5 T                      &ht N6 Y                  &ht N7 U                 &ht N8 I                 &ht N9 O             &ht N0 P         &kp BACKSPACE
-&kp TAB           &hml LCTRL A     &hml LALT S       &hml LCMD D         &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K              &hmr RALT L          &hmr RCTRL SEMI  &kp ENTER
-&key_repeat       &ht BACKSLASH Z  &ht LEFT_BRACE X  &ht LEFT_BRACKET C  &ht LEFT_PARENTHESIS V  &ht MINUS B                   &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACKET COMMA  &ht RIGHT_BRACE DOT  &ht GRAVE FSLH   &kp SQT
-                                                     &kp SPACE                                                                                                                    &kp SPACE
-                  &kp BACKSPACE    &lt 2 LSHFT       &lt_qk 4 SPACE      &lt_qk 3 TAB                                                                    &lt_qk 3 ENTER           &lt_qk 4 SPACE           &lt 2 RSHFT          &kp DEL
+&ht ESCAPE GRAVE  &ht N1 Q         &ht N2 W           &ht N3 E            &ht N4 R                &ht N5 T                      &ht N6 Y                  &ht N7 U                 &ht N8 I                 &ht N9 O             &ht N0 P         &kp BACKSPACE
+&kp TAB           &hml LCTRL A     &hml LALT S        &hml LCMD D         &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K              &hmr RALT L          &hmr RCTRL SEMI  &kp ENTER
+&key_repeat       &ht BACKSLASH Z  &ht LEFT_BRACE X   &ht LEFT_BRACKET C  &ht LEFT_PARENTHESIS V  &ht MINUS B                   &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACKET COMMA  &ht RIGHT_BRACE DOT  &ht GRAVE FSLH   &kp SQT
+                                                      &kp SPACE                                                                                                                    &kp SPACE
+                  &kp BACKSPACE    &sk_layer 2 LSHFT  &lt_qk 4 SPACE      &lt_qk 3 TAB                                                                    &lt_qk 3 ENTER           &lt_qk 4 SPACE           &sk_layer 2 RSHFT    &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp 0 0>;
