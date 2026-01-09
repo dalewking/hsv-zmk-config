@@ -2,7 +2,7 @@
 #include "hillside_view-layouts.dtsi"
 
 / {
-    chosen {
+    chosen: chosen {
         zmk,physical-layout = &default_layout;
     };
 
