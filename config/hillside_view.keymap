@@ -15,6 +15,28 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        hml: homewrow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_LEFT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            hold-trigger-key-positions = <13 14 15 42 43 44 45 30 7 8 9 10 11 19 20 21 22 23 31 32 33 34 35 6 18 16 41 40 39 38>;
+        };
+
+        hmr: homewrow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_RIGHT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 38 19 20 21 22 39 40 41 42 43 45 44>;
+        };
     };
 
     keymap {
@@ -23,11 +45,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&ht ESCAPE GRAVE  &ht N1 Q         &ht N2 W          &ht N3 E            &ht N4 R                &ht N5 T         &ht N6 Y     &ht N7 U                 &ht N8 I                 &ht N9 O             &ht N0 P        &kp BACKSPACE
-&kp TAB           &kp Q            &kp W             &kp E               &kp R                   &kp T            &kp Y        &kp U                    &kp I                    &kp O                &kp P           &kp BACKSPACE
-&key_repeat           &ht BACKSLASH Z  &ht LEFT_BRACE X  &ht LEFT_BRACKET C  &ht LEFT_PARENTHESIS V  &ht MINUS B      &ht EQUAL N  &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACKET COMMA  &ht RIGHT_BRACE DOT  &ht GRAVE FSLH  &kp SQT
-                                                     &kp SPACE                                                                                          &kp SPACE
-                  &kp Q            &kp W             &kp E               &kp R                                                 &kp T                    &kp Y                    &kp U                &kp I
+&ht ESCAPE GRAVE  &ht N1 Q         &ht N2 W          &ht N3 E            &ht N4 R                &ht N5 T                      &ht N6 Y                  &ht N7 U                 &ht N8 I                 &ht N9 O             &ht N0 P         &kp BACKSPACE
+&kp TAB           &hml LCTRL A     &hml LALT S       &hml LCMD D         &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K              &hmr RALT L          &hmr RCTRL SEMI  &kp ENTER
+&key_repeat           &ht BACKSLASH Z  &ht LEFT_BRACE X  &ht LEFT_BRACKET C  &ht LEFT_PARENTHESIS V  &ht MINUS B                   &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACKET COMMA  &ht RIGHT_BRACE DOT  &ht GRAVE FSLH   &kp SQT
+                                                     &kp SPACE                                                                                                                    &kp SPACE
+                  &kp Q            &kp W             &kp E               &kp R                                                                           &kp T                    &kp Y                    &kp U                &kp I
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp 0 0>;
