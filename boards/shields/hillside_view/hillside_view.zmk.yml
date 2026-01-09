@@ -1,0 +1,17 @@
+file_format: "1"
+id: hillside_view
+name: hillside_view
+type: shield
+url: https://github.com/wannabecoffeenerd/hillside
+exposes:
+  - nice_view_header
+features:
+  - keys
+  - display
+  - studio  # Remove this line if your keyboard will not support ZMK Studio
+requires:
+  - pro_micro
+
+siblings:
+  - hillside_view_left
+  - hillside_view_right

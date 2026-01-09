@@ -1,2 +1,8 @@
 
 .zmk/
+/.idea/libraries/fuzztest.xml
+/.idea/.gitignore
+/.idea/hsv-zmk-config.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
