@@ -54,8 +54,51 @@
         compatible = "zmk,combos";
 
         caps {
+            timeout-ms = <50>;
             bindings = <&caps_word>;
             key-positions = <39 44>;
+        };
+
+        cb_soft_off_right {
+            bindings = <&soft_off>;
+            key-positions = <6 11>;
+            layers = <5>;
+            timeout-ms = <100>;
+        };
+
+        cb_soft_off_left {
+            bindings = <&soft_off>;
+            key-positions = <0 5>;
+            layers = <5>;
+            timeout-ms = <100>;
+        };
+
+        cb_reset_right {
+            bindings = <&sys_reset>;
+            key-positions = <18 23>;
+            layers = <5>;
+            timeout-ms = <100>;
+        };
+
+        cb_reset_left {
+            bindings = <&sys_reset>;
+            key-positions = <12 17>;
+            layers = <5>;
+            timeout-ms = <100>;
+        };
+
+        cb_bootloader_right {
+            bindings = <&bootloader>;
+            key-positions = <30 35>;
+            layers = <5>;
+            timeout-ms = <100>;
+        };
+
+        cb_bootloader_left {
+            bindings = <&bootloader>;
+            key-positions = <24 29>;
+            layers = <5>;
+            timeout-ms = <100>;
         };
     };
 
