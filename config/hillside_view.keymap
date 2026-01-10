@@ -167,7 +167,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "DEFAULT";
+            label = "QWERTY";
             bindings = <
 &ht ESCAPE GRAVE  &ht N1 Q         &ht N2 W           &ht N3 E            &ht N4 R                &ht N5 T                      &ht N6 Y                  &ht N7 U                 &ht N8 I                 &ht N9 O             &ht N0 P         &kp BACKSPACE
 &kp TAB           &hml LCTRL A     &hml LALT S        &hml LCMD D         &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K              &hmr RALT L          &hmr RCTRL SEMI  &kp ENTER
