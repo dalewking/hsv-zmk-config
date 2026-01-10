@@ -154,7 +154,7 @@
 &kp TAB        &hml LCTRL TILDE  &hml LALT PLUS    &hml LCMD UNDERSCORE  &hml LSHFT DOUBLE_QUOTES  &hml LA(LC(LG(LSHFT))) COLON      &hmr RA(RC(RG(RSHFT))) SEMICOLON  &hmr RSHFT SQT         &hmr RCMD MINUS  &hmr RALT EQUAL    &hmr RCTRL GRAVE  &kp ENTER
 &key_repeat    &kp BACKSLASH     &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp LEFT_PARENTHESIS      &kp MINUS                         &kp EQUAL                         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp FSLH          &kp APOS
                                                    &trans                                                                                                                                     &trans
-               &trans            &trans            &trans                &tog 2                                                                                        &tog 2                 &trans           &trans             &trans
+               &trans            &trans            &trans                &trans                                                                                        &trans                 &trans           &trans             &trans
             >;
 
             label = "SYMBOLS";
@@ -169,7 +169,7 @@
 &kp TAB        &kp LCTRL  &kp LALT   &kp LCMD      &kp LSHFT  &kp LA(LC(LG(LSHFT)))      &kp PERIOD  &ht F4 NUMBER_4  &ht F5 N5  &ht F6 NUMBER_6  &ht F11 LEFT_PARENTHESIS   &kp ENTER
 &key_repeat    &kp PLUS   &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL                  &kp N0      &ht F1 N1        &ht F2 N2  &ht F3 N3        &ht F12 RIGHT_PARENTHESIS  &kp APOS
                                      &trans                                                                           &trans
-               &trans     &tog 3     &trans        &trans                                            &trans           &trans     &tog 3           &trans
+               &trans     &trans     &trans        &trans                                            &trans           &trans     &trans           &trans
             >;
 
             label = "NUMBERS";
