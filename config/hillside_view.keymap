@@ -116,6 +116,12 @@
             layers = <5>;
             timeout-ms = <100>;
         };
+
+        ZMK_Studio {
+            bindings = <&studio_unlock>;
+            key-positions = <0 29>;
+            layers = <5>;
+        };
     };
 
     keymap {
