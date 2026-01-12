@@ -52,7 +52,6 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                                 
     left_encoder: encoder_left {
         status = "disabled";
         compatible = "alps,ec11";
-        label = "LEFT_ENCODER";
         a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <30>;
@@ -61,7 +60,6 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                                 
     right_encoder: encoder_right {
         status = "disabled";
         compatible = "alps,ec11";
-        label = "RIGHT_ENCODER";
         a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <30>;
@@ -135,7 +133,6 @@ nice_view_spi: &spi0 {
   nice_view: ls0xx@0 {
     status = "disabled";
     compatible = "sharp,ls0xx";
-    label = "DISPLAY";
     spi-max-frequency = <1000000>;
     reg = <0>;
     width = <160>;
