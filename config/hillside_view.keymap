@@ -167,7 +167,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "QWERTY";
+            display-name = "QWERTY";
             bindings = <
 &ht ESCAPE GRAVE  &ht N1 Q         &ht N2 W           &ht N3 E            &ht N4 R                &ht N5 T                      &ht N6 Y                  &ht N7 U                 &ht N8 I                 &ht N9 O             &ht N0 P         &kp BACKSPACE
 &kp TAB           &hml LCTRL A     &hml LALT S        &hml LCMD D         &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K              &hmr RALT L          &hmr RCTRL SEMI  &kp ENTER
@@ -190,7 +190,7 @@
                &trans           &trans              &trans            &trans                                                                          &trans                   &trans                 &trans                 &trans
             >;
 
-            label = "COLEMAK";
+            display-name = "COLEMAK";
         };
 
         sym_layer {
@@ -202,7 +202,7 @@
                &trans            &trans            &trans                &trans                                                                                        &trans                 &trans           &trans             &trans
             >;
 
-            label = "SYMBOLS";
+            display-name = "SYMBOLS";
             sensor-bindings =
                 <&inc_dec_kp UP DOWN>,
                 <&inc_dec_kp C_NEXT C_PREV>;
@@ -217,7 +217,7 @@
                &trans     &trans     &trans        &trans                                            &trans           &trans     &trans           &trans
             >;
 
-            label = "NUMBERS";
+            display-name = "NUMBERS";
             sensor-bindings =
                 <&inc_dec_kp HOME END>,
                 <&inc_dec_kp C_NEXT C_PREV>;
@@ -232,7 +232,7 @@
              &trans                 &trans     &trans     &trans                                           &trans           &trans      &trans           &trans
             >;
 
-            label = "Navigation";
+            display-name = "Navigation";
             sensor-bindings = <&inc_dec_kp UP DOWN>, <&inc_dec_kp LEFT RIGHT>;
         };
 
@@ -245,7 +245,7 @@
                 &none  &trans  &to 1  &trans                    &trans         &to 0          &trans         &none
             >;
 
-            label = "ADJUST";
+            display-name = "ADJUST";
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN>, <&inc_dec_kp F15 F14>;
         };
     };
