@@ -8,6 +8,7 @@ exposes:
 features:
   - keys
   - display
+  - encoder
   - studio  # Remove this line if your keyboard will not support ZMK Studio
 requires:
   - pro_micro
