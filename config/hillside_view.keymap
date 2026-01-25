@@ -68,6 +68,14 @@
             tapping-term-ms = <2000>;
             flavor = "hold-preferred";
         };
+
+        modal_key_left_up: modal_key_left_up {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MODAL_KEY_LEFT_UP";
+            #binding-cells = <0>;
+            tapping-term-ms = <0>;
+            bindings = <&kp PG_UP>, <&kp C_VOLUME_UP>, <&kp C_PREV>;
+        };
     };
 
     combos {
